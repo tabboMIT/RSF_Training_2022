@@ -14,7 +14,7 @@ class HospitalPatient(models.Model):
     patient_name = fields.Char(string='Patient Name',)
     test = fields.Char(string='test Name',)
     doctor_id = fields.Many2one('hospital.doctor',string="Doctor")    
-
+    #slkflnsdgndjng
 
 
     

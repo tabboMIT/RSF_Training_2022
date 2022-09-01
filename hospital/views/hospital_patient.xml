@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="hospital_patient_form" model="ir.ui.view">
+        <field name="name">hospital.patient.form</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <form string="Patient">
+                <!-- <header>
+                </header> -->
+                <sheet>
+                    <group>
+                    <field name="patient_name"/>
+                    <field name="doctor_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_patient_tree" model="ir.ui.view">
+        <field name="name">hospital.patient.tree</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree string="Patient Tree">
+                <field name="patient_name"/>
+                <field name="doctor_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_patient_search" model="ir.ui.view">
+        <field name="name">hospital.patient.search</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <search string="Patient Search">
+                <field name="patient_name"/>
+                <field name="doctor_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hospital_patient_action" model="ir.actions.act_window">
+        <field name="name">Patient Records</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hospital_root" name="Hospital Managment" sequence="0"/>
+    <menuitem id="menu_patient" name="Patient" 
+    parent="menu_hospital_root" 
+    action="hospital_patient_action" sequence="0"/>
+
+
+    
+
+
+
+
+</odoo>
